@@ -34,6 +34,4 @@ WORKDIR /apps
 
 ENTRYPOINT ["helm"]
 
-USER 1001
-
 CMD ["--help"]

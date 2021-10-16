@@ -12,7 +12,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 			org.label-schema.vendor="Jorge Andrada Prieto" \
 			maintainer="Jorge Andrada Prieto <jandradap@gmail.com>"
 
-ENV VERSION=3.4.0
+ENV VERSION=3.7.1
 
 # ENV BASE_URL="https://storage.googleapis.com/kubernetes-helm"
 ENV BASE_URL="https://get.helm.sh"

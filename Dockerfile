@@ -22,13 +22,17 @@ RUN apk add --update --no-cache --clean-protected \
     curl \
     ca-certificates \
     git \
+    && addgroup -g 1000 helm \
+    && adduser -G helm -u 1000 helm -D \
     && curl -L ${BASE_URL}/${TAR_FILE} |tar xvz \
     && mv linux-amd64/helm /usr/bin/helm \
     && chmod +x /usr/bin/helm \
     && rm -rf linux-amd64 \
-    && helm plugin install https://github.com/karuppiah7890/helm-schema-gen \
+    && su helm -c "helm plugin install https://github.com/karuppiah7890/helm-schema-gen" \
     && apk del curl \
     && rm -f /var/cache/apk/*
+
+USER helm
 
 WORKDIR /apps
 

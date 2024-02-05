@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.19
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -12,7 +12,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 			org.label-schema.vendor="Jorge Andrada Prieto" \
 			maintainer="Jorge Andrada Prieto <jandradap@gmail.com>"
 
-ENV VERSION=3.7.1
+ENV VERSION=3.14.0
 
 # ENV BASE_URL="https://storage.googleapis.com/kubernetes-helm"
 ENV BASE_URL="https://get.helm.sh"

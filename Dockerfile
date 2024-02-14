@@ -17,6 +17,7 @@ ENV VERSION=3.7.1
 # ENV BASE_URL="https://storage.googleapis.com/kubernetes-helm"
 ENV BASE_URL="https://get.helm.sh"
 ENV TAR_FILE="helm-v${VERSION}-linux-amd64.tar.gz"
+ENV HELM_PLUGINS="/home/helm/.local/share/helm/plugins"
 
 RUN apk add --update --no-cache --clean-protected \
     curl \
